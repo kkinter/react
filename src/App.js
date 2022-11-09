@@ -7,9 +7,10 @@ import Footer from './components/footer';
 function App() {
   return (
     <div className="App">
-      <Header />
+      <Header info="this is MY msg"
+      myNumber="6"/>
       <p>main content</p>
-      <Footer />
+      <Footer trademark="page by Wook"/>
     </div>
   );
 }
