@@ -5,9 +5,16 @@ class Footer extends Component{
   // createAlert(){
   //   alert('hello. You clicked me');
   // }
+  // 바뀌지 않음
 
-  changed() {
-    console.log('chaged')
+  state = {
+    name: 'Wook'
+  }
+
+  changed = evt => {
+
+    this.setState({name: evt.target.value})
+    console.log(this.state.name)
   }
 
   render() {
@@ -16,7 +23,8 @@ class Footer extends Component{
       <h2 onClick={this.props.myalert}>
         {this.props.trademark}
       </h2>
-      <input onChange={this.changed} type="text"/>
+      <input value={this.state.name}
+          onChange={this.changed} type="text"/>
     </React.Fragment>
     )
   }
