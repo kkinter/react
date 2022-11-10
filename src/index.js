@@ -1,6 +1,5 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import Header from './components/header';
@@ -10,6 +9,11 @@ import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 // import { CookiesProvider } from 'react-cookie';
 
+
+const context = React.createContext();
+export const CtxConsumer = context.Consumer;
+
+const animals = ['snake', 'elephant', 'lion']
 
 const router = createBrowserRouter([
   {
@@ -30,7 +34,9 @@ const container = document.getElementById('root');
 const root = createRoot(container);
 root.render(
     <React.StrictMode>
+      <context.Provider value={{animals : animals}}>
         <RouterProvider router={router} />
+      </context.Provider>
     </React.StrictMode>
 );
 
