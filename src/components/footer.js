@@ -8,7 +8,16 @@ class Footer extends Component{
   // 바뀌지 않음
 
   state = {
-    name: 'Wook'
+    name: ''
+  }
+
+  componentDidMount(){
+    this.setState({name: 'MyName'})
+    // subscribe
+  }
+
+  componentWillUnmount(){
+    //unsubscribe
   }
 
   changed = evt => {
