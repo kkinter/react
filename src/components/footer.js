@@ -34,7 +34,12 @@ class Footer extends Component{
     return (
      <div>
       { animals.map( animal => {
-          return <h1>{animal}</h1>;
+          return (
+          <div key={animal}>
+            <h1>{animal}</h1>
+            <h1>{animal}</h1>
+          </div>
+          );
       }) }
      </div>
     )
