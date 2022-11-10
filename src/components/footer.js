@@ -8,7 +8,8 @@ class Footer extends Component{
   // 바뀌지 않음
 
   state = {
-    name: ''
+    name: '',
+    age: 35,
   }
 
   componentDidMount(){
@@ -34,6 +35,8 @@ class Footer extends Component{
       </h2>
       <input value={this.state.name}
           onChange={this.changed} type="text"/>
+      {/* 35면 yes */}
+      { this.state.age === 35 ? "yes": "no"}
     </React.Fragment>
     )
   }
